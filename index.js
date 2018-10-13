@@ -1,4 +1,4 @@
-const tf = require('@tensorflow/tjfs');
+import * as tf from '@tensorflow/tfjs';
 import {MnistData} from './data';
 
 var model;
@@ -40,6 +40,7 @@ function createModel() {
   createLogEntry("Model Created");
 
   createLogEntry("Add layers...");
+  console.log("Adding Layers");
   model.add(tf.layers.conv2d({
     inputShape: [28,28,1],
     kernelSize: 5,
